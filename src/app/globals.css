@@ -851,6 +851,26 @@ a {
   max-width: 480px;
 }
 
+.services-label {
+  align-items: center;
+  color: var(--steel-500);
+  display: inline-flex;
+  font-size: 0.7rem;
+  font-weight: 700;
+  gap: 12px;
+  letter-spacing: 0.2em;
+  margin: 0 0 clamp(40px, 6vh, 64px);
+  text-transform: uppercase;
+}
+
+.services-label::before {
+  background: var(--gradient-metal);
+  content: "";
+  display: block;
+  height: 1px;
+  width: 32px;
+}
+
 .services-list {
   display: flex;
   flex-direction: column;

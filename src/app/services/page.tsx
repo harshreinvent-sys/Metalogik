@@ -24,15 +24,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="services-page" aria-label="Services">
-      <section className="services-intro">
-        <p className="eyebrow">Our services</p>
-        <h1>Power. Precision. Speed.</h1>
-        <p>
-          12 kW fiber laser cutting, CNC bending and complete metal
-          fabrication, delivering reliable, accurate and production-ready
-          solutions tailored to your requirements.
-        </p>
-      </section>
+      <h1 className="services-label">Our services</h1>
       <section className="services-list" aria-label="Our services">
         {services.map((service, index) => (
           <article className={`service-row ${index % 2 ? "reverse" : ""}`} key={service.title}>
