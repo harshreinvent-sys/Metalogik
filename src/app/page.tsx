@@ -1,25 +1,60 @@
 import Link from "next/link";
 
-const capabilities = [
+const services = [
   {
     number: "01",
-    title: "Laser cutting",
-    copy: "Fibre laser cutting for mild steel, stainless and aluminium sheet with clean, burr-free edges.",
+    title: "Metal laser cutting",
+    copy: "High-speed, high-precision fiber laser cutting for industrial, architectural and custom applications.",
   },
   {
     number: "02",
     title: "CNC bending",
-    copy: "Press-brake forming to tight tolerances, from single prototypes to repeat production runs.",
+    copy: "Precision sheet-metal bending with accurate angles, dimensions and repeatability.",
   },
   {
     number: "03",
     title: "Metal fabrication",
-    copy: "Welding, assembly and finishing of frames, enclosures, brackets and structural parts.",
+    copy: "Complete fabrication solutions including welding, assembly and customized metal structures.",
   },
   {
     number: "04",
-    title: "Design & drafting",
-    copy: "CAD design, nesting and DFM review so every part is ready for the machine before it hits the floor.",
+    title: "Custom metal work",
+    copy: "From your CAD drawing or concept to the finished component—we manufacture it to your specifications.",
+  },
+];
+
+const laserPoints = [
+  "Heavy-thickness metal cutting",
+  "High-speed production",
+  "Precision & repeatability",
+  "Clean, accurate cuts",
+  "Prototype to bulk production",
+];
+
+const reasons = [
+  {
+    title: "12 kW power",
+    copy: "High-power laser technology for demanding cutting applications.",
+  },
+  {
+    title: "High-speed production",
+    copy: "Faster processing helps reduce production time and improve productivity.",
+  },
+  {
+    title: "Heavy-thickness capability",
+    copy: "Designed to handle challenging and thicker metal applications.",
+  },
+  {
+    title: "Precision engineering",
+    copy: "Accurate and consistent results across every job.",
+  },
+  {
+    title: "Complete solution",
+    copy: "Laser cutting, bending and fabrication under one roof.",
+  },
+  {
+    title: "Quality you can rely on",
+    copy: "Focused on accuracy, finish and consistent production quality.",
   },
 ];
 
@@ -29,21 +64,30 @@ export default function Home() {
       <section className="hero">
         <div className="hero-panel">
           <div className="hero-copy">
-            <p className="eyebrow">CNC cutting · Fabrication · Design</p>
+            <p className="eyebrow">Metalogik</p>
             <h1>
-              Precision metalwork, <span className="metal-text">cut to spec.</span>
+              Power. Precision. <span className="metal-text">Speed.</span>
             </h1>
+            <p className="hero-subline">
+              12 kW Fiber Laser Cutting <span aria-hidden="true">|</span> CNC Bending{" "}
+              <span aria-hidden="true">|</span> Metal Fabrication
+            </p>
             <p>
-              Metalogik takes your drawings from CAD to finished part. Laser
-              cutting, CNC bending and full fabrication under one roof, with
-              the accuracy your project depends on.
+              Metalogik is a modern metal processing and fabrication company
+              offering high-power 12 kW fiber laser cutting, CNC bending and
+              complete metal fabrication solutions.
+            </p>
+            <p>
+              From precision components to heavy-duty metal applications, we
+              deliver reliable, accurate and production-ready solutions
+              tailored to your requirements.
             </p>
             <div className="hero-actions">
               <Link className="btn btn-metal" href="/contact">
                 Request a quote <span aria-hidden="true">↗</span>
               </Link>
               <Link className="btn btn-outline" href="/services">
-                View services
+                Our services
               </Link>
             </div>
           </div>
@@ -51,16 +95,16 @@ export default function Home() {
             <div className="hero-plate">
               <dl>
                 <div>
-                  <dt>Tolerance</dt>
-                  <dd>±0.1 mm</dd>
+                  <dt>Laser power</dt>
+                  <dd>12 kW</dd>
                 </div>
                 <div>
-                  <dt>Sheet up to</dt>
-                  <dd>25 mm</dd>
+                  <dt>Thickness</dt>
+                  <dd>Heavy</dd>
                 </div>
                 <div>
-                  <dt>Turnaround</dt>
-                  <dd>From 3 days</dd>
+                  <dt>Speed</dt>
+                  <dd>High</dd>
                 </div>
               </dl>
             </div>
@@ -68,19 +112,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="capabilities" aria-label="Capabilities">
+      <section className="laser-feature" aria-label="12 kW fiber laser cutting">
+        <div className="laser-inner">
+          <div className="laser-copy">
+            <p className="eyebrow">12 kW fiber laser</p>
+            <h2>Heavy thickness. High speed. Precision results.</h2>
+            <p>
+              Our advanced 12 kW fiber laser cutting technology delivers the
+              power and speed required for demanding metal cutting
+              applications.
+            </p>
+          </div>
+          <ul className="laser-points">
+            {laserPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="capabilities" aria-label="Our services">
         <div className="section-head">
           <div>
-            <p className="eyebrow">What we do</p>
-            <h2>One workshop, every step.</h2>
+            <p className="eyebrow">Our services</p>
+            <h2>Cutting, bending and fabrication under one roof.</h2>
           </div>
-          <p>
-            From flat sheet to finished assembly, each stage is handled
-            in-house so nothing gets lost between suppliers.
-          </p>
+          <Link className="btn btn-outline" href="/services">
+            All services <span aria-hidden="true">↗</span>
+          </Link>
         </div>
         <div className="capabilities-grid">
-          {capabilities.map((item) => (
+          {services.map((item) => (
             <article className="capability" key={item.number}>
               <span className="capability-number">{item.number}</span>
               <h3>{item.title}</h3>
@@ -90,14 +152,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="why" aria-label="Why Metalogik">
+        <div className="section-head">
+          <div>
+            <p className="eyebrow">Why Metalogik?</p>
+            <h2>Built for demanding metal work.</h2>
+          </div>
+        </div>
+        <div className="why-grid">
+          {reasons.map((reason) => (
+            <article className="why-card" key={reason.title}>
+              <h3>{reason.title}</h3>
+              <p>{reason.copy}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="cta-band" aria-label="Start a project">
         <div className="cta-inner">
           <div>
             <h2>Have a drawing ready? Send it over.</h2>
-            <p>DXF, DWG, STEP or a sketch on paper. We will quote it either way.</p>
+            <p>From CAD file or concept to finished component, built to your specifications.</p>
           </div>
           <Link className="btn btn-outline" href="/contact">
-            Start a project <span aria-hidden="true">↗</span>
+            Request a quote <span aria-hidden="true">↗</span>
           </Link>
         </div>
       </section>

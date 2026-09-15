@@ -2,22 +2,22 @@ const services = [
   {
     title: "Metal laser cutting",
     number: "01",
-    copy: "Fibre laser cutting of mild steel, stainless steel and aluminium sheet. Fine kerf, minimal heat distortion and clean edges that are ready for bending or welding without secondary finishing.",
+    copy: "High-speed, high-precision fiber laser cutting for industrial, architectural and custom applications. Our 12 kW fiber laser handles heavy-thickness metal with clean, accurate cuts, from prototype to bulk production.",
   },
   {
     title: "CNC bending",
     number: "02",
-    copy: "CNC press-brake forming with repeatable angles and flange lengths. Suited to brackets, enclosures, channels and folded panels, from one-off prototypes to batch production.",
+    copy: "Precision sheet-metal bending with accurate angles, dimensions and repeatability across every part.",
   },
   {
     title: "Metal fabrication",
     number: "03",
-    copy: "MIG and TIG welding, assembly and finishing of frames, guards, housings and structural components. Powder coating, galvanising and plating arranged through trusted partners.",
+    copy: "Complete fabrication solutions including welding, assembly and customized metal structures.",
   },
   {
     title: "Custom metal work",
     number: "04",
-    copy: "Bespoke architectural and decorative pieces: screens, signage, balustrades and furniture. We work from your drawings or develop the design with you from a sketch.",
+    copy: "From your CAD drawing or concept to the finished component—we manufacture it to your specifications.",
   },
 ];
 
@@ -25,11 +25,12 @@ export default function ServicesPage() {
   return (
     <main className="services-page" aria-label="Services">
       <section className="services-intro">
-        <p className="eyebrow">Services</p>
-        <h1>Built with precision.</h1>
+        <p className="eyebrow">Our services</p>
+        <h1>Power. Precision. Speed.</h1>
         <p>
-          Cutting, forming and fabrication handled end to end in one workshop,
-          so tolerances hold from the first cut to the final weld.
+          12 kW fiber laser cutting, CNC bending and complete metal
+          fabrication, delivering reliable, accurate and production-ready
+          solutions tailored to your requirements.
         </p>
       </section>
       <section className="services-list" aria-label="Our services">

@@ -10,8 +10,8 @@ export default function SiteFooter() {
             metalogik<span>.</span>
           </Link>
           <p>
-            CNC laser cutting, bending and metal fabrication for industrial,
-            architectural and bespoke projects.
+            12 kW fiber laser cutting, CNC bending and complete metal
+            fabrication solutions.
           </p>
         </div>
         <div className="footer-links">
@@ -33,7 +33,7 @@ export default function SiteFooter() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 Metalogik</span>
-          <span>Cut. Formed. Fabricated.</span>
+          <span>Power. Precision. Speed.</span>
         </div>
       </div>
     </footer>

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Metalogik",
-  description: "CNC laser cutting, bending and metal fabrication.",
+  description: "12 kW fiber laser cutting, CNC bending and complete metal fabrication solutions. Power. Precision. Speed.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

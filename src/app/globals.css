@@ -335,8 +335,23 @@ a {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.75;
-  margin: 28px 0 0;
-  max-width: 480px;
+  margin: 18px 0 0;
+  max-width: 500px;
+}
+
+.hero-copy .hero-subline {
+  color: var(--steel-800);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 26px 0 8px;
+  max-width: none;
+  text-transform: uppercase;
+}
+
+.hero-subline span {
+  color: var(--steel-400);
+  margin: 0 8px;
 }
 
 .hero-actions {
@@ -503,6 +518,10 @@ a {
   line-height: 1.7;
   margin: 0;
   max-width: 380px;
+}
+
+.section-head .btn {
+  flex: none;
 }
 
 .cta-band {
@@ -1106,6 +1125,14 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .laser-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-visual {
     min-height: 280px;
   }
@@ -1170,12 +1197,25 @@ a {
   }
 
   .hero,
+  .laser-feature,
+  .why,
   .capabilities,
   .cta-band,
   .page-space,
   .services-page {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-subline span {
+    display: block;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
   }
 
   .hero {
