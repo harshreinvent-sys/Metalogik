@@ -36,13 +36,7 @@ export default function ServicesPage() {
   return (
     <main className="services-page" aria-label="Services">
       <section className="services-intro">
-        <p className="eyebrow">Our services</p>
-        <h1>Power. Precision. Speed.</h1>
-        <p>
-          12 kW fiber laser cutting, CNC bending and complete metal
-          fabrication, delivering reliable, accurate and production-ready
-          solutions tailored to your requirements.
-        </p>
+        <h1>Our services</h1>
       </section>
       <section className="services-list" aria-label="Our services">
         {services.map((service, index) => (
@@ -51,10 +45,12 @@ export default function ServicesPage() {
               <span aria-hidden="true" />
             </div>
             <div className="service-copy">
-              <span className="service-icon">
-                <service.icon />
-              </span>
-              <span className="service-number">{service.number}</span>
+              <div className="service-meta">
+                <span className="service-icon">
+                  <service.icon />
+                </span>
+                <span className="service-number">{service.number}</span>
+              </div>
               <h2>{service.title}</h2>
               <p>{service.copy}</p>
             </div>

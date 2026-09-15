@@ -15,10 +15,12 @@ const base = {
 export function LaserCuttingIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>
-      <path d="M19 5h10v6H19zM21 11h6v6h-6zM22 17h4l2 6h-8z" />
-      <path d="M24 23v10" strokeDasharray="2 2.5" />
-      <path d="M12 39h24" />
-      <path d="M18 33l-3 4M30 33l3 4M24 36v-2M15 41l-2 3M33 41l2 3M20 43l-1 2M28 43l1 2" />
+      <path d="M15 4h18v7H15z" />
+      <path d="M19 11h10v6H19z" />
+      <path d="M18 17h12l-6 9z" />
+      <path d="M24 27v9" strokeDasharray="2.2 2.6" />
+      <path d="M7 40h34" />
+      <path d="M16 35l-4 3M32 35l4 3M12 43l-2 3M36 43l2 3M19 44l-1 3M29 44l1 3M24 44v3" />
     </svg>
   );
 }
@@ -26,12 +28,11 @@ export function LaserCuttingIcon(props: IconProps) {
 export function CncBendingIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>
-      <path d="M20 5h8v7h-8z" />
-      <path d="M22 12h4l2 7h-8z" />
-      <path d="M24 19v3" />
-      <path d="M9 41h30M13 41v-8h22v8" />
-      <path d="M8 30l16-6 16 6" />
-      <path d="M14 27l-4 3M34 27l4 3" />
+      <path d="M14 4h20v6H14z" />
+      <path d="M21 10h6v8h-6z" />
+      <path d="M21 18l3 6 3-6" />
+      <path d="M4 24l20 9 20-9" />
+      <path d="M6 44h36v-8H32l-8-5-8 5H6z" />
     </svg>
   );
 }
