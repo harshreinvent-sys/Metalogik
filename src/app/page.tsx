@@ -1,28 +1,5 @@
 import Link from "next/link";
 
-const services = [
-  {
-    number: "01",
-    title: "Metal laser cutting",
-    copy: "High-speed, high-precision fiber laser cutting for industrial, architectural and custom applications.",
-  },
-  {
-    number: "02",
-    title: "CNC bending",
-    copy: "Precision sheet-metal bending with accurate angles, dimensions and repeatability.",
-  },
-  {
-    number: "03",
-    title: "Metal fabrication",
-    copy: "Complete fabrication solutions including welding, assembly and customized metal structures.",
-  },
-  {
-    number: "04",
-    title: "Custom metal work",
-    copy: "From your CAD drawing or concept to the finished component—we manufacture it to your specifications.",
-  },
-];
-
 const laserPoints = [
   "Heavy-thickness metal cutting",
   "High-speed production",
@@ -128,27 +105,6 @@ export default function Home() {
               <li key={point}>{point}</li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section className="capabilities" aria-label="Our services">
-        <div className="section-head">
-          <div>
-            <p className="eyebrow">Our services</p>
-            <h2>Cutting, bending and fabrication under one roof.</h2>
-          </div>
-          <Link className="btn btn-outline" href="/services">
-            All services <span aria-hidden="true">↗</span>
-          </Link>
-        </div>
-        <div className="capabilities-grid">
-          {services.map((item) => (
-            <article className="capability" key={item.number}>
-              <span className="capability-number">{item.number}</span>
-              <h3>{item.title}</h3>
-              <p>{item.copy}</p>
-            </article>
-          ))}
         </div>
       </section>
 
