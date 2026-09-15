@@ -1,4 +1,12 @@
 import Link from "next/link";
+import {
+  DeliveryIcon,
+  PowerIcon,
+  PrecisionIcon,
+  QualityIcon,
+  ReliableIcon,
+  ThicknessIcon,
+} from "@/components/icons";
 
 const laserPoints = [
   "Heavy-thickness metal cutting",
@@ -11,26 +19,32 @@ const laserPoints = [
 const reasons = [
   {
     title: "12 kW power",
+    icon: PowerIcon,
     copy: "High-power laser technology for demanding cutting applications.",
   },
   {
     title: "High-speed production",
+    icon: DeliveryIcon,
     copy: "Faster processing helps reduce production time and improve productivity.",
   },
   {
     title: "Heavy-thickness capability",
+    icon: ThicknessIcon,
     copy: "Designed to handle challenging and thicker metal applications.",
   },
   {
     title: "Precision engineering",
+    icon: PrecisionIcon,
     copy: "Accurate and consistent results across every job.",
   },
   {
     title: "Complete solution",
+    icon: ReliableIcon,
     copy: "Laser cutting, bending and fabrication under one roof.",
   },
   {
     title: "Quality you can rely on",
+    icon: QualityIcon,
     copy: "Focused on accuracy, finish and consistent production quality.",
   },
 ];
@@ -118,6 +132,9 @@ export default function Home() {
         <div className="why-grid">
           {reasons.map((reason) => (
             <article className="why-card" key={reason.title}>
+              <span className="why-icon">
+                <reason.icon />
+              </span>
               <h3>{reason.title}</h3>
               <p>{reason.copy}</p>
             </article>
