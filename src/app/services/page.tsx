@@ -24,7 +24,9 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="services-page" aria-label="Services">
-      <h1 className="services-label">Our services</h1>
+      <section className="services-intro">
+        <h1>Our services</h1>
+      </section>
       <section className="services-list" aria-label="Our services">
         {services.map((service, index) => (
           <article className={`service-row ${index % 2 ? "reverse" : ""}`} key={service.title}>
