@@ -433,6 +433,160 @@ a {
 }
 
 /* ---------------------------------------------------------------------------
+   Home – 12 kW laser feature
+   --------------------------------------------------------------------------- */
+
+.laser-feature {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: clamp(48px, 8vh, 96px) 32px 0;
+}
+
+.laser-inner {
+  background: var(--gradient-metal);
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgb(42 45 49 / 25%), inset 0 1px 0 rgb(255 255 255 / 15%);
+  color: var(--white);
+  display: grid;
+  gap: clamp(32px, 6vw, 80px);
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  overflow: hidden;
+  padding: clamp(36px, 5vw, 72px);
+  position: relative;
+}
+
+.laser-inner::after {
+  background: radial-gradient(700px 320px at 95% 0%, rgb(255 255 255 / 12%), transparent 70%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.laser-copy,
+.laser-points {
+  position: relative;
+  z-index: 1;
+}
+
+.laser-copy .eyebrow {
+  color: rgb(255 255 255 / 65%);
+}
+
+.laser-copy .eyebrow::before {
+  background: rgb(255 255 255 / 60%);
+}
+
+.laser-copy h2 {
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  margin: 0;
+  max-width: 520px;
+}
+
+.laser-copy p {
+  color: rgb(255 255 255 / 72%);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 24px 0 0;
+  max-width: 460px;
+}
+
+.laser-points {
+  align-self: center;
+  display: grid;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.laser-points li {
+  align-items: center;
+  border-top: 1px solid rgb(255 255 255 / 16%);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: 14px;
+  letter-spacing: -0.01em;
+  padding: 16px 0;
+}
+
+.laser-points li:last-child {
+  border-bottom: 1px solid rgb(255 255 255 / 16%);
+}
+
+.laser-points li::before {
+  background: rgb(255 255 255 / 90%);
+  border-radius: 1px;
+  box-shadow: 0 0 0 4px rgb(255 255 255 / 12%);
+  content: "";
+  flex: none;
+  height: 8px;
+  width: 8px;
+}
+
+/* ---------------------------------------------------------------------------
+   Home – why Metalogik
+   --------------------------------------------------------------------------- */
+
+.why {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: clamp(48px, 8vh, 96px) 32px;
+}
+
+.why-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.why-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow-card);
+  padding: 26px 24px 24px 28px;
+  position: relative;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.why-card::before {
+  background: var(--gradient-metal);
+  border-radius: 6px 0 0 6px;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+
+.why-card:hover {
+  border-color: var(--steel-300);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+}
+
+.why-card h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.why-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
    Home – capability strip & sections
    --------------------------------------------------------------------------- */
 
