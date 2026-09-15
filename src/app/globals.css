@@ -819,10 +819,24 @@ a {
   display: flex;
   margin: 0 0 clamp(64px, 10vh, 120px);
   max-width: none;
-  min-height: clamp(280px, 40vh, 460px);
+  min-height: clamp(360px, 62vh, 640px);
   padding: clamp(32px, 5vw, 64px) clamp(24px, 6vw, 80px);
   position: relative;
   overflow: hidden;
+}
+
+.services-intro::after {
+  background: var(--gradient-metal-sheen);
+  content: "";
+  inset: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  position: absolute;
+}
+
+.services-intro h1 {
+  position: relative;
+  z-index: 1;
 }
 
 .services-intro::before {
