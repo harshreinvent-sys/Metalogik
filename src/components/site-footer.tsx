@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/logo";
 
 export default function SiteFooter() {
   return (
@@ -6,8 +7,7 @@ export default function SiteFooter() {
       <div className="footer-inner">
         <div className="footer-intro">
           <Link className="footer-mark" href="/">
-            <span className="brand-mark" aria-hidden="true" />
-            metalogik<span>.</span>
+            <Logo size="footer" />
           </Link>
           <p>
             12 kW fiber laser cutting, CNC bending and complete metal

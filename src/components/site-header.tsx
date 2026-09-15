@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Logo from "@/components/logo";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -18,8 +19,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="header-inner">
         <Link className="brand" href="/" onClick={() => setIsOpen(false)}>
-          <span className="brand-mark" aria-hidden="true" />
-          metalogik<span>.</span>
+          <Logo />
         </Link>
         <nav className={`desktop-nav ${isOpen ? "is-open" : ""}`} aria-label="Main navigation">
           {links.map((link) => (
